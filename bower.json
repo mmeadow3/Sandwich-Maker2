@@ -1,0 +1,17 @@
+{
+  "name": "sandwich",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Mike Meadows <mmeadow33@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
