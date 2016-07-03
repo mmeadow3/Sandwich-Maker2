@@ -2,6 +2,8 @@
 
 const $ = jQuery;
 
-const Maker = require('./maker');
+const SandwichMaker = require('./maker');
 
 
+console.log("bread:", SandwichMaker.addTopping());
+console.log("price:", SandwichMaker.totalPrice); /////working for totalprice
