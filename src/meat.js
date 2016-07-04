@@ -3,9 +3,9 @@
 let Meat = {
 	
 	meatPrices: {
-		bacon: 1.00,
-		cheeseburger: 2.50,
-		filet: 2.00,
+		turkey: 1.00,
+		salami: 2.50,
+		bacon: 2.00,
 		none: 0.00
 		},
 

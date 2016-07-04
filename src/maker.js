@@ -6,24 +6,15 @@ const Meat = require('./meat');
 const Veggies = require('./veggies');
 
 
+
 let Maker = {
-	breadPrice: Bread,
-	totalPrice: 0,
-	addTopping: function (toppingPrice){
-		return Maker.totalPrice += toppingPrice;
-	},
-	total: function () {
-		return Maker.totalPrice;
-	}
+  totalPrice: 0,
+  addTopping: function(toppingPrice) {
+    Maker.totalPrice += toppingPrice;
+  },
+  getTotal: function() {
+    return Maker.totalPrice;
+  }
 };
 
-
-
-
-
-
-
-
-
-
-module.exports = Maker; 
+module.exports = Maker;

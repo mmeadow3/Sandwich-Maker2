@@ -3,15 +3,27 @@
 
 const $ = jQuery;
 
+
 const SandwichMaker = require('./maker');
+
+var selectedTopping ;
+var finalToppings = "";
 
 
 // console.log("bread:", SandwichMaker.breadPrice.breadPrices.wheat); ///////returns value for wheat Bread//////
 
 console.log("price:", SandwichMaker.totalPrice); /////working for totalprice
 
-$( "#meat-chooser" ).change(function() {
-  console.log( "Handler for .change() called." );
+
+
+$( "#meat-chooser input" ).change(function() {
+let selectedTopping = ($('input[name=radio1]:checked', '#meat-chooser').val()); ///////gives value from radio button
+let chosenTopping = SandwichMaker.addTopping(meatPrice)
+console.log(selectedTopping);
+console.log(chosenTopping);
+
+// finalSandwichPrice += chosenTopping;
+// finalToppings += selectedTopping + ", ";
 });
 
 $( "#cheese-chooser" ).change(function() {
@@ -81,36 +93,28 @@ const Meat = require('./meat');
 const Veggies = require('./veggies');
 
 
+
 let Maker = {
-	breadPrice: Bread,
-	totalPrice: 0,
-	addTopping: function (toppingPrice){
-		return Maker.totalPrice += toppingPrice;
-	},
-	total: function () {
-		return Maker.totalPrice;
-	}
+  totalPrice: 0,
+  addTopping: function(toppingPrice) {
+    Maker.totalPrice += toppingPrice;
+  },
+  getTotal: function() {
+    return Maker.totalPrice;
+  }
 };
 
+module.exports = Maker;
 
-
-
-
-
-
-
-
-
-module.exports = Maker; 
 },{"./bread":2,"./cheese":3,"./meat":5,"./veggies":6}],5:[function(require,module,exports){
 "use strict";
 
 let Meat = {
 	
 	meatPrices: {
-		bacon: 1.00,
-		cheeseburger: 2.50,
-		filet: 2.00,
+		turkey: 1.00,
+		salami: 2.50,
+		bacon: 2.00,
 		none: 0.00
 		},
 
