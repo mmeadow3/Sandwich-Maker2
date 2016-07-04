@@ -6,7 +6,8 @@ const $ = jQuery;
 const SandwichMaker = require('./maker');
 
 
-console.log("bread:", SandwichMaker.addTopping());
+console.log("bread:", SandwichMaker.breadPrice.breadPrices.wheat); ///////returns value for wheat Bread//////
+
 console.log("price:", SandwichMaker.totalPrice); /////working for totalprice
 },{"./maker":4}],2:[function(require,module,exports){
 "use strict";
@@ -15,7 +16,7 @@ let Bread = {
 	
 	breadPrices: {
 		wheat: 1.00,
-		sourdough: 2.00,
+		sourdough: 2.50,
 		flatbread: 2.00,
 		white: 1.00
 		},
@@ -33,17 +34,28 @@ module.exports = Bread;
 },{}],3:[function(require,module,exports){
 "use strict";
 
-let Cheese = {}; 
+let Cheese = {
+	
+	cheesePrices: {
+		cheddar: 1.00,
+		american: 2.50,
+		extra: 2.00,
+		none: 0.00
+		},
 
-
-
-
+addCheese: function (cheese){
+	return Cheese.cheesePrices[cheese];
+}
+}; 
 
 
 
 
 
 module.exports = Cheese; 
+
+
+
 },{}],4:[function(require,module,exports){
 "use strict";
 
@@ -58,10 +70,10 @@ let Maker = {
 	totalPrice: 0,
 	addTopping: function (toppingPrice){
 		return Maker.totalPrice += toppingPrice;
+	},
+	total: function () {
+		return Maker.totalPrice;
 	}
-	// total: function () {
-	// 	return Maker.totalPrice;
-	// };
 };
 
 
@@ -77,31 +89,51 @@ module.exports = Maker;
 },{"./bread":2,"./cheese":3,"./meat":5,"./veggies":6}],5:[function(require,module,exports){
 "use strict";
 
-let Meat = {}; 
+let Meat = {
+	
+	meatPrices: {
+		bacon: 1.00,
+		cheeseburger: 2.50,
+		filet: 2.00,
+		none: 0.00
+		},
 
-
-
-
+addMeat: function (meat){
+	return Meat.meatPrices[meat];
+}
+}; 
 
 
 
 
 
 module.exports = Meat; 
+
+
 },{}],6:[function(require,module,exports){
 "use strict";
 
-let Veggies = {}; 
+let Veggies = {
+	
+	veggiePrices: {
+		pickles: 1.00,
+		fancy_ketchup: 2.50,
+		tomatoes: 2.00,
+		none: 0.00
+		},
 
-
-
-
+addVeggies: function (veggies){
+	return Veggies.veggiePrices[veggies];
+}
+}; 
 
 
 
 
 
 module.exports = Veggies; 
+
+
 },{}]},{},[1])
 
 

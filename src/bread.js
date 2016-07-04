@@ -4,7 +4,7 @@ let Bread = {
 	
 	breadPrices: {
 		wheat: 1.00,
-		sourdough: 2.00,
+		sourdough: 2.50,
 		flatbread: 2.00,
 		white: 1.00
 		},

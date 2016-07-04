@@ -11,10 +11,10 @@ let Maker = {
 	totalPrice: 0,
 	addTopping: function (toppingPrice){
 		return Maker.totalPrice += toppingPrice;
+	},
+	total: function () {
+		return Maker.totalPrice;
 	}
-	// total: function () {
-	// 	return Maker.totalPrice;
-	// };
 };
 
 
