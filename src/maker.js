@@ -7,13 +7,14 @@ const Veggies = require('./veggies');
 
 
 
+let Maker = {
+  totalPrice: 0,
+  addTopping: function(toppingPrice) {
+    Maker.totalPrice += toppingPrice;
+  },
+  getTotal: function() {
+    return Maker.totalPrice;
+  }
+};
 
-
-
-
-
-
-
-
-
-module.exports = Maker; 
+module.exports = Maker;
