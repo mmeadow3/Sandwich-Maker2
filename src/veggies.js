@@ -3,8 +3,8 @@
 let Veggies = {
 	
 	veggiePrices: {
-		pickles: 1.00,
-		fancy_ketchup: 2.50,
+		pickles: 1.50,
+		mustard: 0.99,
 		tomatoes: 2.00,
 		none: 0.00
 		},

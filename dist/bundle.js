@@ -6,19 +6,35 @@ const $ = jQuery;
 const SandwichMaker = require('./maker');
 
 
-console.log("bread:", SandwichMaker.breadPrice.breadPrices.wheat); ///////returns value for wheat Bread//////
+// console.log("bread:", SandwichMaker.breadPrice.breadPrices.wheat); ///////returns value for wheat Bread//////
 
 console.log("price:", SandwichMaker.totalPrice); /////working for totalprice
+
+$( "#meat-chooser" ).change(function() {
+  console.log( "Handler for .change() called." );
+});
+
+$( "#cheese-chooser" ).change(function() {
+  console.log( "Handler for .change() called." );
+});
+
+$( "#bread-chooser" ).change(function() {
+  console.log( "Handler for .change() called." );
+});
+
+$( "#condo-chooser" ).change(function() {
+  console.log( "Handler for .change() called." );
+});
 },{"./maker":4}],2:[function(require,module,exports){
 "use strict";
 
 let Bread = {
 	
 	breadPrices: {
-		wheat: 1.00,
+		wheat: 1.50,
 		sourdough: 2.50,
 		flatbread: 2.00,
-		white: 1.00
+		white: 0.99
 		},
 
 addBread: function (bread){
@@ -37,9 +53,9 @@ module.exports = Bread;
 let Cheese = {
 	
 	cheesePrices: {
-		cheddar: 1.00,
-		american: 2.50,
-		extra: 2.00,
+		cheddar: 1.50,
+		american: 0.99,
+		Swiss: 2.00,
 		none: 0.00
 		},
 
@@ -116,8 +132,8 @@ module.exports = Meat;
 let Veggies = {
 	
 	veggiePrices: {
-		pickles: 1.00,
-		fancy_ketchup: 2.50,
+		pickles: 1.50,
+		mustard: 0.99,
 		tomatoes: 2.00,
 		none: 0.00
 		},

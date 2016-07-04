@@ -3,9 +3,9 @@
 let Cheese = {
 	
 	cheesePrices: {
-		cheddar: 1.00,
-		american: 2.50,
-		extra: 2.00,
+		cheddar: 1.50,
+		american: 0.99,
+		Swiss: 2.00,
 		none: 0.00
 		},
 
